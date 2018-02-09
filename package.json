@@ -9,7 +9,12 @@
     "build": "tsc",
     "dev": "nodemon -w src -x ts-node src/index.ts"
   },
-  "keywords": ["typescript", "koa", "sequelize","boilerplate"],
+  "keywords": [
+    "typescript",
+    "koa",
+    "sequelize",
+    "boilerplate"
+  ],
   "author": "Manan Vaghasiya",
   "license": "MIT",
   "dependencies": {
@@ -20,6 +25,7 @@
     "@types/node": "^9.4.2",
     "@types/sequelize": "^4.27.5",
     "@types/umzug": "^2.1.0",
+    "@types/yargs": "^10.0.1",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
     "koa-logger": "^3.1.0",
@@ -30,7 +36,8 @@
     "sequelize-cli": "^3.2.0",
     "sequelize-typescript": "^0.6.2",
     "typescript": "^2.7.1",
-    "umzug": "^2.1.0"
+    "umzug": "^2.1.0",
+    "yargs": "^10.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.14.12",

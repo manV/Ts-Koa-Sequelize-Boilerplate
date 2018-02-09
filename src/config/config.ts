@@ -8,7 +8,8 @@ const config: {
     password: 'password',
     database: 'sequelize_typescript',
     host: '127.0.0.1',
-    dialect: 'postgres'
+    dialect: 'postgres',
+    logging: false
   },
   test: {
     username: 'root',
