@@ -19,28 +19,29 @@
   "license": "MIT",
   "dependencies": {
     "@koa/cors": "^2.2.1",
-    "@types/koa": "^2.0.44",
+    "@types/koa": "^2.0.45",
     "@types/koa-logger": "^3.1.0",
     "@types/koa-router": "^7.0.27",
-    "@types/node": "^9.4.2",
-    "@types/sequelize": "^4.27.5",
-    "@types/umzug": "^2.1.0",
-    "@types/yargs": "^10.0.1",
-    "koa": "^2.4.1",
+    "@types/node": "^9.6.4",
+    "@types/sequelize": "^4.27.14",
+    "@types/umzug": "^2.1.1",
+    "@types/yargs": "^11.0.0",
+    "dotenv": "^5.0.1",
+    "koa": "^2.5.0",
     "koa-bodyparser": "^4.2.0",
-    "koa-logger": "^3.1.0",
+    "koa-logger": "^3.2.0",
     "koa-router": "^7.4.0",
     "pg": "^7.4.1",
     "reflect-metadata": "^0.1.12",
-    "sequelize": "^4.33.0",
-    "sequelize-cli": "^3.2.0",
-    "sequelize-typescript": "^0.6.2",
-    "typescript": "^2.7.1",
+    "sequelize": "^4.37.6",
+    "sequelize-cli": "^4.0.0",
+    "sequelize-typescript": "^0.6.3",
+    "typescript": "^2.8.1",
     "umzug": "^2.1.0",
-    "yargs": "^10.1.0"
+    "yargs": "^11.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.14.12",
-    "ts-node": "^4.1.0"
+    "nodemon": "^1.17.3",
+    "ts-node": "^5.0.1"
   }
 }
