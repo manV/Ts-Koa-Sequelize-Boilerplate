@@ -1,30 +1,12 @@
 import { ISequelizeConfig } from 'sequelize-typescript';
 
-const config: {
-  [index: string]: ISequelizeConfig,
-} = {
-  development: {
-    username: 'postgres',
-    password: 'password',
-    database: 'sequelize_typescript',
-    host: '127.0.0.1',
-    dialect: 'postgres',
-    logging: false
-  },
-  test: {
-    username: 'root',
-    password: '',
-    database: 'database_test',
-    host: '127.0.0.1',
-    dialect: 'mysql'
-  },
-  production: {
-    username: 'root',
-    password: '',
-    database: 'database_production',
-    host: '127.0.0.1',
-    dialect: 'mysql'
-  }
+const config: ISequelizeConfig = {
+  username: process.env.DB_USERNAME || 'testuser',
+  password: process.env.DB_PASSWORD || 'testpassword',
+  database: process.env.DB_NAME || 'pstestdb',
+  host: process.env.DB_HOST || 'localhost',
+  dialect: 'postgres',
+  logging: Boolean(process.env.DB_LOGGING)
 };
-
+console.log(config);
 export default config;
