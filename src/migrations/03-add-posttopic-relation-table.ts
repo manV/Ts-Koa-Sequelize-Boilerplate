@@ -1,8 +1,8 @@
-import * as Sequelize from 'sequelize'
+import * as Sequelize from 'sequelize';
 
 export async function up(sequelize: Sequelize.Sequelize) {
-  const queryInterface = sequelize.getQueryInterface()
-  
+  const queryInterface = sequelize.getQueryInterface();
+
   await queryInterface.createTable('posttopic', {
     postId: {
       type: Sequelize.INTEGER,

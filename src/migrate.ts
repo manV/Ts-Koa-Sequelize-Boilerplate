@@ -14,7 +14,7 @@ const umzug = new Umzug({
     params: [
       sequelize,
       sequelize.constructor,
-      function() {
+      () => {
         throw new Error(
           'Migration tried to use old style "done" callback. Please upgrade to "umzug" and return a promise instead.'
         );
@@ -40,12 +40,12 @@ umzug.on('reverted', logUmzugEvent('reverted'));
 const cmdStatus = async () => {
   const executed = await umzug.executed();
   const pending = await umzug.pending();
-  
+
   const current = executed.length > 0 ? executed[0].file : '<NO_MIGRATIONS>';
   const status = {
-    current: current,
-    executed: executed.map(m => m.file),
-    pending: pending.map(m => m.file)
+    current,
+    executed: executed.map((m) => m.file),
+    pending: pending.map((m) => m.file)
   };
   return { executed, pending };
 };
@@ -108,11 +108,11 @@ switch (cmd) {
 }
 
 executedCmd
-  .then(result => {
+  .then((result) => {
     const doneStr = `${cmd.toUpperCase()} DONE`;
     console.log(doneStr);
   })
-  .catch(err => {
+  .catch((err) => {
     const errorStr = `${cmd.toUpperCase()} ERROR`;
     console.log(errorStr);
     console.log(err);

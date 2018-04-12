@@ -7,8 +7,8 @@ import Post from './post';
 })
 export default class Topic extends Model<Topic> {
   @Column
-  name!: string;
+  public name!: string;
 
   @BelongsToMany(() => Post, () => PostTopic)
-  posts!: Post[]
+  public posts!: Post[];
 }
